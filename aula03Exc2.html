@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula3 exemplo 2</title>
+</head>
+<body>
+
+    <script>
+    
+    var Buzina = function(mensagem){
+        //meio imperativo de construção
+        this.mensagem = mensagem;
+        }
+        //forma 2 de fazer funções(forma mais usada)
+        Buzina.prototype.tocar = function(teste){
+            console.log(this.mensagem);
+        }
+
+
+        var b1 = new Buzina("Fuommm");
+        b1.tocar();
+        var b2 = new Buzina("Uá-Uá");
+        b2.tocar();
+
+    </script>
+    
+</body>
+</html>
