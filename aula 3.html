@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula03 Exc1</title>
+</head>
+<body>
+    <script>
+
+        function Pessoa(){
+        //meio descritivo de construção
+            var a = {
+            nome:"Fulano",
+            idade:19,
+            altura:2.10,
+            envelhece:function(pessoa){
+            pessoa.idade++;
+            },
+            envelhece:function(){
+            this.idade++;
+            }
+        };            
+            return a;
+        }
+        
+
+        function Pessoa2(){
+        //meio imperativo de construção
+            this.nome="Fulano";
+            this.idade=19;
+            this.altura=2.10;
+            //forma 1 de fazer funções
+            this.envelhece=function(pessoa){
+            pessoa.idade++;
+            }
+        }
+        //forma 2 de fazer funções(forma mais usada)
+        Pessoa2.prototype.envelhece2 = function(){
+            this.idade++;
+        }
+
+
+        var a = new Pessoa2();
+
+        var b = Pessoa();
+
+        var c = {
+            nome:"Siclano",
+            idade:33,
+            altura:1.90
+        };
+
+        function envelhece(pessoa){
+            pessoa.idade++;
+        }
+
+        var w = function(pessoa){
+            pessoa.idade++;
+        }
+
+        console.log(a, typeof a);
+        console.log(b, typeof b);
+        
+    
+    
+    </script>
+</body>
+</html>
