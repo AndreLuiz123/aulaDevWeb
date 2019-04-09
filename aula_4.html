@@ -7,16 +7,32 @@
 </head>
 <body>
 
-    <p>A soma de <span>2</span>+<span>3</span> é <span id="resultado">5</span></p>
+    <p>A soma de <span id="var1">2</span>+<span id="var2">3</span> é <span id="resultado">5</span></p>
     <!--O <p></p> escreve um texto comum-->
     <!--O <span></span> é um elemento sem significado-->
-    <script>
-       var a = 2;
-       var b = 5;
-       var r = a+b;
+    <p>O produto de <span id="var1">2</span>*<span id="var2">3</span> é <span id="resultado2">5</span></p>
+
+   <p>é <span id="resultado2">5</span></p>
+
+   
+   <script>
+
 
        var eResultado = document.getElementById("resultado");
+       var eResultado2 = document.getElementById("resultado2");
+       var variavel1 = document.getElementById("teste");
+       var variavel2 = document.getElementById("teste2");
+       var variavel3 = document.getElementById("var2");
+       var variavel4 = document.getElementById("var1");
+
+       var a = Number(variavel4.textContent);
+       var b = Number(variavel3.textContent);
+       var r = a+b;
+       var e = a*b;
+       
        eResultado.textContent = r;
+       eResultado2.textContent = e;
+      
     </script>
 
 
