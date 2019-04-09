@@ -7,13 +7,13 @@
 </head>
 <body>
 
-    <p>A soma de <span id="var1">2</span>+<span id="var2">3</span> é <span id="resultado">5</span></p>
+    <p>A soma de <span id="var1">3</span>+<span id="var2">3</span> é <span id="resultado">5</span></p>
     <!--O <p></p> escreve um texto comum-->
     <!--O <span></span> é um elemento sem significado-->
-    <p>O produto de <span id="var1">2</span>*<span id="var2">3</span> é <span id="resultado2">5</span></p>
+    <p>O produto de <span id="var1">3</span>*<span id="var2">3</span> é <span id="resultado2">5</span></p>
 
    <p>é <span id="resultado2">5</span></p>
-
+    <button id="botao">Calcular</button>
    
    <script>
 
@@ -25,13 +25,28 @@
        var variavel3 = document.getElementById("var2");
        var variavel4 = document.getElementById("var1");
 
-       var a = Number(variavel4.textContent);
-       var b = Number(variavel3.textContent);
-       var r = a+b;
-       var e = a*b;
+       var varBotao = document.getElementById("botao");
+
+
+      varBotao.addEventListener("click", calculaResultado);
+
+    
+       function calculaResultado(){
+            var a = Number(variavel4.textContent);
+            var b = Number(variavel3.textContent);
+            var r = a+b;     
+             eResultado.textContent = r;
+       }
+    
        
-       eResultado.textContent = r;
-       eResultado2.textContent = e;
+
+
+       //var e = a*b;
+       //Para pegar o que esta no html e passar para o js basta pegar o element ID antes e passar pra variavel dps, da forma 
+       //que esta acima.
+       
+      
+       //eResultado2.textContent = e;
       
     </script>
 
