@@ -7,13 +7,16 @@
 </head>
 <body>
 
-    <p>A soma de 2+3 é 5</p>
+    <p>A soma de <span>2</span>+<span>3</span> é <span id="resultado">5</span></p>
     <!--O <p></p> escreve um texto comum-->
-
+    <!--O <span></span> é um elemento sem significado-->
     <script>
-        var a = 2;
-        var b = 3;
-    document.body.innerHTML = "<p>A soma de "+a +" + "+b+" é "+(a+b)+"</p>";
+       var a = 2;
+       var b = 5;
+       var r = a+b;
+
+       var eResultado = document.getElementById("resultado");
+       eResultado.textContent = r;
     </script>
 
 
