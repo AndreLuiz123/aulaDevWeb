@@ -10,7 +10,7 @@
     <p>A soma de <span id="var1">3</span>+<span id="var2">3</span> é <span id="resultado">5</span></p>
     <!--O <p></p> escreve um texto comum-->
     <!--O <span></span> é um elemento sem significado-->
-    <p>O produto de <span id="var1">3</span>*<span id="var2">3</span> é <span id="resultado2">5</span></p>
+    <p>O produto de <span id="teste">3</span>*<span id="teste2">3</span> é <span id="resultado2">5</span></p>
 
    <p>é <span id="resultado2">5</span></p>
     <button id="botao">Calcular</button>
@@ -24,6 +24,11 @@
        var variavel2 = document.getElementById("teste2");
        var variavel3 = document.getElementById("var2");
        var variavel4 = document.getElementById("var1");
+
+       variavel4.contentEditable = true;
+       variavel3.contentEditable = true;
+       variavel1.contentEditable = true;
+       variavel2.contentEditable = true;
 
        var varBotao = document.getElementById("botao");
 
