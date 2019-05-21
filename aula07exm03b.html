@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7 Exem 3</title>
+</head>
+
+<body>
+    <h1>Lista de presença</h1>
+    <p>Nome do aluno: <span id="nome">Fulano</span>.</p>
+    <button id="adicionar">Adicionar</button>
+    
+    <h1>Presentes:<span id="total"></span></h1>
+    <ul id="presentes"></ul>
+
+    <script>
+        var eNome = document.getElementById("nome");
+        var eAdicionar = document.getElementById("adicionar");
+        var ePresentes = document.getElementById("presentes");
+        var total = document.getElementById("total");
+        eNome.contentEditable = true;
+        eAdicionar.addEventListener("click", adicionaPresente);
+
+        function adicionaPresente(){
+            var nome = eNome.textContent;
+            var item = document.createElement("li");
+            item.textContent = nome;
+            ePresentes.appendChild(item);
+            total.textContent = ePresentes.children.length;
+        }
+
+    </script>
+
+</body>
+
+</html>
