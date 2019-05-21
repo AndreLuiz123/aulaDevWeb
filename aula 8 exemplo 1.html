@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8</title>
+</head>
+<body>
+    <h1>Lista de convidados</h1>
+    <!--<form action=""><Isso aqui redireciona a página pra outra
+    mas não sera usado neste curso-->
+    <form name="convidado" method="GET">
+        <!--O name nomeia os dados das coisas-->
+        <input name="nome" type="text"/>
+        <input name="idade" type="text"/>
+        <input type="submit"/>
+        <input type="reset"/>
+    </form>
+    <!--O GET acessa elementos do servidor diretamente-->
+    <!--O POST cria elementos no servidor-->
+    <!--Quando se cria um form o html entra no DOM(console)-->
+    <!--O input tem o "value", que permite acessos mais fáceis
+    a valores-->
+
+    <ul>
+
+    </ul>
+
+    <p>O mais novo é o <span id="maisNovo"></span></p>
+    <button id="novoAchar">Calcular mais novo</button>
+
+    <script>
+
+        var convidados = [];
+        var maisNovoDoc = document.getElementById("maisNovo");
+        var botaoNovo = document.getElementById("novoAchar");
+        var form = document.forms.convidado;
+        form.addEventListener("submit", processaEnvio);
+
+      /*function processaEnvio()
+        {
+            console.log("Formulário Enviado!");
+        }*/
+
+        form.addEventListener("submit", processaEnvio);
+        form.addEventListener("submit",maisNovo);
+        function processaEnvio(e)
+        {
+            e.preventDefault();
+            console.log("Formulário Enviado!");
+
+            var nome = document.forms.convidado.nome.value;
+            var idade = Number(document.forms.convidado.idade.value);
+            console.log(nome, idade);
+            var novoConvidado = {"nome":nome, "idade":idade};
+            convidados.push(novoConvidado);
+
+
+
+            var lista = document.getElementsByTagName("ul")[0];
+            var novoLi = document.createElement("li");
+            novoLi.textContent = novoConvidado.nome + " de " + novoConvidado.idade + " anos";
+            lista.appendChild(novoLi);
+            
+            //Faz forms apagar automaticamente
+            document.forms.convidado.reset();
+            //Faz cursor do mouse voltar automaticamente para o texto do forms
+            document.forms.convidado.nome.focus();
+        }
+
+        botaoNovo.addEventListener("click",maisNovo);
+        
+        function maisNovo()
+        {   
+            console.log(convidados);
+            var maisNovo = convidados[0].idade;
+            var retorno = 0;
+            for(i = 0; i<convidados.length; i++)
+            {
+                if(convidados[i].idade<maisNovo)
+                {
+                    maisNovo = convidados[i].idade
+                    retorno = i;
+                }
+            }
+
+            maisNovoDoc.textContent = convidados[retorno].nome;
+        }
+
+    </script>
+
+</body>
+</html>
