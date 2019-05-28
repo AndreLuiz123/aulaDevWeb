@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 9 exemplo 1</title>
+</head>
+
+<body>
+
+    <!-- Quando trabalhar com tabela: Quando tivermos dados com várias dimensões -->
+    <!-- Não use tabelas para fazer formatação -->
+    <!-- Tabela serve para passar dados -->
+    <!-- Se o que esta abaixo for aberto no navegador, o resultado não será uma tabela propriamente dita -->
+    Nome Idade Cidade
+    Fulano 23 Juis de Fora
+    Beltrano 19 Bicas
+    Ciclano 27 São João Nepomuceno
+    <!-- Uma forma alternativa, mas ainda porca, é o uso do "pre" -->
+    <pre>
+    Nome            Idade   Cidade
+    Fulano          23      Juis de Fora
+    Beltrano        19      Bicas
+    Ciclano         27      São João Nepomuceno
+    </pre>
+    <!-- Mas a melhor forma de fazer isso é através de um "table" -->
+    <table>
+        Nome Idade Cidade
+        Fulano 23 Juis de Fora
+        Beltrano 19 Bicas
+        Ciclano 27 São João Nepomuceno
+    </table>
+    <!-- Visualmente o table não faz nada, isso porque os dados não estão dispostos direito -->
+    <!-- Para resolver este problema, usamos a tag "tr"(table row) e um "td"(table data) -->
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>Cidade</td>
+        </tr>
+        <tr>
+            <td>Fulano</td>
+            <td>23</td>
+            <td>Juis de Fora</td>
+        </tr>
+        <tr>
+            <td>Beltrano</td>
+            <td>19</td>
+            <td>Bicas</td>
+        </tr>
+        <tr>
+            <td>Ciclano</td>
+            <td>27</td>
+            <td>São João Nepomuceno</td>
+        </tr>
+    </table>
+    <!-- Com o "td" é possível segurar os dados dentro da tablea -->
+    <!-- Esta formatação não é muito prática de ler, por isso é importante usar uma identação adequada -->
+    <!-- Assim, com alt shift f ... -->
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>Cidade</td>
+        </tr>
+        <tr>
+            <td>Fulano</td>
+            <td>23</td>
+            <td>Juis de Fora</td>
+        </tr>
+        <tr>
+            <td>Beltrano</td>
+            <td>19</td>
+            <td>Bicas</td>
+        </tr>
+        <tr>
+            <td>Ciclano</td>
+            <td>27</td>
+            <td>São João Nepomuceno</td>
+        </tr>
+    </table>
+    <!-- Problemas muito comuns envolvem esquecer uma '/' no </td>. Isso faz o html inicializar um novo td e juntos dois td's em um -->
+    <!-- Uma coisa que fazemos para debugar o código é o "border" -->
+    <table border="borda">
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>Cidade</td>
+        </tr>
+        <tr>
+            <td>Fulano</td>
+            <td>23</td>
+            <td>Juis de Fora</td>
+        </tr>
+        <tr>
+            <td>Beltrano</td>
+            <td>19</td>
+            <td>Bicas</td>
+        </tr>
+        <tr>
+            <td>Ciclano</td>
+            <td>27</td>
+            <td>São João Nepomuceno</td>
+        </tr>
+    </table>
+    <!-- Quando se esquece um </tr> fica parecendo que não tem nada, mas a linha entre as barras do "border" ficam mais "grossas" no ponto que vocÊ
+    esqueceu o </td>, já que é criado um espaço de tamanho zero e sem informação -->
+    <!-- Para destacar os dados principais da tabela, basta usar o <thead>-->    
+    <table border="borda">
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Idade</td>
+                <td>Cidade</td>
+            </tr>
+        </thead>
+            <tr>
+                <td>Fulano</td>
+                <td>23</td>
+                <td>Juis de Fora</td>
+            </tr>
+            <tr>
+                <td>Beltrano</td>
+                <td>19</td>
+                <td>Bicas</td>
+            </tr>
+            <tr>
+                <td>Ciclano</td>
+                <td>27</td>
+                <td>São João Nepomuceno</td>
+            </tr>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+    <!-- A dificuldade em trabalhar com tabela é criar um elemento e coloca-lo nela -->
+ 
+</body>
+
+</html>
