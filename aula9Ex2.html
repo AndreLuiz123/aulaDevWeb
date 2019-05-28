@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 9 exemplo 1</title>
+</head>
+
+<body>
+
+    <table border="borda">
+        <form name="cadastro">
+            <div><label>Nome: <input type="text" name="nome"/></label></div>
+            <div><label>Idade: <input type="text" name="idade"/></label></div>
+            <div><label>Cidade: <input type="text" name="cidade"/></label></div>
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Idade</td>
+                <td>Cidade</td>
+            </tr>
+        </thead>
+            <tr>
+                <td>Fulano</td>
+                <td>23</td>
+                <td>Juis de Fora</td>
+            </tr>
+            <tr>
+                <td>Beltrano</td>
+                <td>19</td>
+                <td>Bicas</td>
+            </tr>
+            <tr>
+                <td>Ciclano</td>
+                <td>27</td>
+                <td>São João Nepomuceno</td>
+            </tr>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+    <!-- A dificuldade em trabalhar com tabela é criar um elemento e coloca-lo nela -->
+    <!-- Para usar o label, basta usar cascate ou via estrutura -->
+    <script>
+        var formCadastro = document.forms.cadastro;
+
+        formCadastro.addEventListener("submit", processaCadastro);
+
+        function processaCadastro(e)
+        {
+            e.preventDefault();
+            var nome = formCadastro.nome.value;
+            var idade = formCadastro.idade.value;
+            var cidade = formCadastro.cidade.value;
+        }
+    
+    
+    </script>
+ 
+</body>
+
+</html>
