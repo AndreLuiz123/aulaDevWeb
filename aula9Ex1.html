@@ -107,6 +107,13 @@
     esqueceu o </td>, já que é criado um espaço de tamanho zero e sem informação -->
     <!-- Para destacar os dados principais da tabela, basta usar o <thead>-->    
     <table border="borda">
+        <form name="cadastro">
+            <div><label>Nome: <input type="text" name="nome"/></label></div>
+            <div><label>Idade: <input type="text" name="idade"/></label></div>
+            <div><label>Cidade: <input type="text" name="cidade"/></label></div>
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
         <thead>
             <tr>
                 <td>Nome</td>
@@ -134,6 +141,7 @@
         </tfoot>
     </table>
     <!-- A dificuldade em trabalhar com tabela é criar um elemento e coloca-lo nela -->
+    <!-- Para usar o label, basta usar cascate ou via estrutura -->
  
 </body>
 
