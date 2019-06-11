@@ -28,3 +28,10 @@ li{
 li.Fruta{
     color: rgb(255, 0, 212);
 }
+ol>li{
+    font-size: 2em;
+}
+/*Todos os li's descendentes da classe preparo*/
+.preparo li{
+    color: darkgray;
+}
