@@ -17,6 +17,7 @@
             <input type="reset"/>
         </form>
         <thead>
+            <tbody>
             <tr>
                 <td>Nome</td>
                 <td>Idade</td>
@@ -38,6 +39,7 @@
                 <td>27</td>
                 <td>São João Nepomuceno</td>
             </tr>
+            </tbody>
         <tfoot>
             
         </tfoot>
@@ -48,13 +50,32 @@
         var formCadastro = document.forms.cadastro;
 
         formCadastro.addEventListener("submit", processaCadastro);
+        var corpoTabela = document.querySelector("tbody");
 
         function processaCadastro(e)
         {
             e.preventDefault();
             var nome = formCadastro.nome.value;
-            var idade = formCadastro.idade.value;
+            var idade = Number(formCadastro.idade.value);
             var cidade = formCadastro.cidade.value;
+            jogaLinhaTabela(nome, idade,cidade);
+            formCadastro.reset();
+            formCadastro.nome.focus();
+        }
+
+        function jogaLinhaTabela(nome, idade, cidade)
+        {
+            var tdNome = document.createElement("td");
+            tdNome.textContent = nome;
+            var tdIdade = document.createElement("td");
+            tdIdade.textContent = idade;
+            var tdCidade = document.createElement("td");
+            tdCidade.textContent = cidade;
+            var trLinha = document.createElement("tr");
+            trLinha.appendChild(tdNome);
+            trLinha.appendChild(tdIdade);
+            trLinha.appendChild(tdCidade);
+            corpoTabela.appendChild(trLinha);
         }
     
     

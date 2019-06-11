@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10 ex1</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+
+        var itens = [
+            {nome: "Item 1"},
+            {nome: "Item 2"},
+            {nome: "Item 3"},
+            {nome: "Item 4"},
+            {nome: "Item 5"}
+        ];
+    
+        var lista = document.querySelector("ul");
+        atualizaLista();
+       /* for(var i = 0; i< itens.length; i++){
+            var nLi = document.createElement("li");
+            nLi.textContent = itens[i].nome;
+            lista.appendChild(nLi);
+            //nLi.addEventListener("click", itemClick);
+            nLi.addEventListener("click", criaOuvinte(i));
+        }*/
+
+       
+
+        function atualizaLista(){
+        lista.innerHTML = "";
+        for(var i = 0; i< itens.length; i++){
+            var nLi = document.createElement("li");
+            var sNome = document.createElement("span");
+            sNome.textContent = itens[i].nome;
+            var bDelete = document.createElement("button");
+            bDelete.textContent = "X";
+            nLi.appendChild(sNome);
+            nLi.appendChild(bDelete);
+            //nLi.textContent = itens[i].nome;
+            lista.appendChild(nLi);
+            //nLi.addEventListener("click", itemClick);
+            nLi.addEventListener("click", criaOuvinte(i));
+        }
+        }
+        
+        
+
+      /*  function itemClick(event){
+            console.log("ITEM CLICKADO!", event.srcElement.textContent);
+            lista.removeChild(event.srcElement);
+            i = n;
+            console.log(i);
+            console.log(event);
+        }*/
+        //O conteúdo da variável é fixo, não importa o nome dele no parâmetro
+        //Closure: Forma de guardar dados para serem executados no futuro
+
+
+        function criaOuvinte(n){
+            return function(event){
+            console.log("ITEM CLICKADO!", event.srcElement.textContent);
+            itens.splice(n, 1);
+            //lista.removeChild(event.srcElement);
+            atualizaLista();
+           }
+        }
+   
+    </script>
+    
+</body>
+</html>
