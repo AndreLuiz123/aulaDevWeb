@@ -1,0 +1,30 @@
+/*Exemplo de Arquivo externo*/
+h1{
+    color: blue;
+}
+
+li{
+    font-size: 1.2em;
+}
+
+/*#i01{
+    color: greenyellow;
+}*/
+#i02{
+    color: blueviolet;
+}
+#i03{
+    color: rgb(151, 10, 10);
+}
+#i04{
+    color: rgb(36, 139, 10);
+}
+.Fruta{
+    color: rgb(112, 122, 19);
+}
+.Legume{
+    color: rgb(81, 119, 81);
+}
+li.Fruta{
+    color: rgb(255, 0, 212);
+}

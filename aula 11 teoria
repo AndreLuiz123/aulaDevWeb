@@ -1,0 +1,57 @@
+-CSS tem função seletora 
+-O seletor vem com um conjunto de propriedades no formato
+    propriedade: valor;
+
+exemplo:
+    selector{
+        propriedade: valor;
+        propriedade: valor;
+        ...
+    }
+errar sintaxe no css não mostra erro. Os erros são corrigidos pelo feeling do programador
+
+Um arquivo css pode ter seletores de mesmo nome separados
+selector1{
+    p1:v;
+}
+
+selector1{
+    p2:v;
+}
+Também pode ter mais de um seletor com a mesma propriedade
+
+selector1,selector2{
+    p3:v;
+}
+
+Tem tres formas de botar o css num html.
+
+1-Em linha
+    funciona como um atributo html
+2-Embutido
+    Um trecho CSS junto com o código html
+3-Arquivos externos
+    Arquivos externos com os códigos css
+
+Vantagens e desvantagens:
+
+1-Em linha
+    Vantagens: 
+        -Fácil de escrever
+    Desvantagens:
+        -Identação ruim
+        -Repetir muitas vezes uma mesma propriedade desnecessariamete 
+        -Difícil alterar as propriedades
+
+2-Embutido
+    Vantagens:
+        -Evita os problemas do anterior
+    Desvantagens:
+        -Como o código esta junto com o html, caso seja necessário mudar algo comum em páginas diferentes, a modificação
+        se torna ruim
+3-Externo 
+    Vantagens:
+        -Mais fácil de fazer modificações
+        -Melhor Identação
+        -Bom para fazer cache
+
