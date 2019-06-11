@@ -34,6 +34,14 @@
     <script>
         var liUva = document.querySelector("#i02");
         console.log(liUva.style);
+        var tipo = document.createElement("span");
+        tipo.textContent = " roxa";
+        liUva.appendChild(tipo);
+        tipo.addEventListener("click", function(e){
+            e.target.textContent = " verde";
+            e.target.style.color = "green";
+            e.target.parentElement.style.color = "green";
+        })
     </script>
 </body>
 </html>
