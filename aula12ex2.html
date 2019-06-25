@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 12 Exemplo 02</title>
+    <style>
+      
+        #a,#b,#c,#d{
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+            width: 50px;/*a largura vai levar em conta o conteúdo + os numeros dos lados, então esse negocio tem tamanh 52px*/
+            height: 50px;/*a largura vai levar em conta o conteúdo + os numeros dos lados, então esse negocio tem tamanh 52px*/
+            /*display: inline-block;/*elemento e linha(inline) joga fora a altura e largura fixa, o inlinebox nao*/
+            display: block;/*elemento e linha(inline) joga fora a altura e largura fixa, o inlinebox nao*/
+            padding-left: 5px; /*as margens se somam verticalmente, então a distância, visualmente, entre os blcos é a soma das margens*/  
+
+            /*Se a altura ou largura nao estiverem congelados, o tamanho da caixa depende do tamanho do bloco, se o tamanho esta congelado, 
+            o texto sai das bordas do bloco*/
+        }
+        #a{
+            background-color:rgba(255, 0, 0, 0.5); 
+            float: left;/* float faz o elemento sair do fluxo, o que faz os outros elementos ocuparem o espaço "liberado". Mas elementos em linha
+            não ficam atras de elemento futuante, então algumas letras se sobrepoem. O texto de elementos inline não fica atras de conteudo flutuante,
+            então o CSS fica atras(por isso o verde some) mas o texto vvai pra baixo*/
+            height: 70px;
+        }
+        #b{
+            background-color:rgba(0,255,  0, 0.5); 
+           /* float: right;/*isso vai mudar a ordem das parada. O float muda a regra do fluxo*/
+        }
+        #c{
+            background-color:rgba(0, 0, 255, 0.5); 
+      
+            clear: both;
+        }
+
+
+        /*fluxo: pega elementos e separa por quebra de linga*/
+
+
+    </style>
+</head>
+<body>
+    <div id="a">A</div>
+    <div id="b">B</div>
+    <div id="c">C</div>
+</body>
+</html>
